@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/penguin-astronaut/otus-js-03-2021-HW4/issues"
   },
-  "homepage": "https://github.com/penguin-astronaut/otus-js-03-2021-HW4#readme"
+  "homepage": "https://github.com/penguin-astronaut/otus-js-03-2021-HW4#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "@types/jest": "^26.0.23",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
 }
