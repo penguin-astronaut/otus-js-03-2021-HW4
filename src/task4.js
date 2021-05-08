@@ -7,7 +7,7 @@ const user = {
   },
 };
 
-const admin = { ...user};
+const admin = { ...user };
 admin.role = "admin";
 
 export { user, admin };
