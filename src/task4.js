@@ -1,11 +1,13 @@
 const user = {
   name: "John",
+
+  setAge() {
+    const age = +prompt("Input number");
+    this.age = Number.isInteger(age) ? age : 0;
+  },
 };
 
-const age = +prompt("Input number");
-user.age = Number.isInteger(age) ? age : 0;
-
-const admin = Object.assign(user);
+const admin = { ...user};
 admin.role = "admin";
 
 export { user, admin };
