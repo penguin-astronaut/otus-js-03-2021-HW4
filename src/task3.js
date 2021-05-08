@@ -15,7 +15,7 @@ function multiplicationTableForSeven() {
 }
 
 function average() {
-  const max = prompt("Input number");
+  const max = +prompt("Input number");
 
   if (!Number.isInteger(max)) {
     console.log(false);
