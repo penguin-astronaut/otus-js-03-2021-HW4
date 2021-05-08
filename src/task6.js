@@ -14,7 +14,7 @@ function pow(number, degree) {
   }
 
   let res = number;
-  while (degree > 1) {
+  for (let i = 1; i < degree; i += 1) {
     res *= number;
   }
 
