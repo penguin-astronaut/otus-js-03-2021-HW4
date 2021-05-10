@@ -30,4 +30,37 @@ function getDayByDate() {
   return daysName[curDay];
 }
 
-export { getDayByDate };
+function minutsOfDay() {
+  const dateStart = new Date();
+  const dateNow = new Date();
+
+  dateStart.setHours(0, 0, 0, 0);
+
+  return Math.ceil((dateNow.getTime() - dateStart.getTime()) / 60000);
+}
+
+function dateDifference(firstBirthDay, secondBirthDay) {
+  const bdFirst = firstBirthDay.match(/^(\d{2})\.(\d{2})\.(\d{4})$/);
+  const bdSecond = secondBirthDay.match(/^(\d{2})\.(\d{2})\.(\d{4})$/);
+
+  if (!bdFirst || !bdSecond) {
+    return "Incorrect dates";
+  }
+
+  const dayFirst = bdFirst[1];
+  const monthFirst = bdFirst[2];
+  const yearFirst = bdFirst[3];
+
+  const daySecond = bdSecond[1];
+  const monthSecond = bdSecond[2];
+  const yearSecond = bdSecond[3];
+
+  const dateFirst = new Date(`${yearFirst}-${monthFirst}-${dayFirst}`);
+  const dateSecond = new Date(`${yearSecond}-${monthSecond}-${daySecond}`);
+
+  return dateFirst.getTime() - dateSecond.getTime() > 0
+    ? "second user is younger"
+    : "first user is younger";
+}
+
+export { getDayByDate, minutsOfDay, dateDifference };
