@@ -32,11 +32,9 @@ function getDayByDate() {
 
 function minutsOfDay() {
   const dateStart = new Date();
-  const dateNow = new Date();
-
   dateStart.setHours(0, 0, 0, 0);
 
-  return Math.ceil((dateNow.getTime() - dateStart.getTime()) / 60000);
+  return Math.ceil((Date.now() - dateStart.getTime()) / 60000);
 }
 
 function dateDifference(firstBirthDay, secondBirthDay) {
