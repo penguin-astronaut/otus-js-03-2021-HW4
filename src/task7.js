@@ -1,4 +1,9 @@
-export default function templateInit() {
+export function templateInit() {
+  const div = document.createElement("div");
+  div.classList.add("app");
+
+  document.body.prepend(div);
+
   document.body.querySelector(".app").innerHTML =
     '<div class="form">' +
     '  <input type="text" placeholder="input text" class="input">' +
@@ -35,5 +40,3 @@ export default function templateInit() {
     document.querySelector(".texts").append(p);
   });
 }
-
-templateInit();

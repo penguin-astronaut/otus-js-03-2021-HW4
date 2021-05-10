@@ -1,7 +1,6 @@
-import templateInit from "./task7";
+import { templateInit } from "./task7";
 
 describe("DOM test", () => {
-  document.body.innerHTML = '<div class="app"></div>';
   templateInit();
 
   it("check temaplate", () => {
