@@ -56,6 +56,10 @@ function dateDifference(firstBirthDay, secondBirthDay) {
   const dateFirst = new Date(`${yearFirst}-${monthFirst}-${dayFirst}`);
   const dateSecond = new Date(`${yearSecond}-${monthSecond}-${daySecond}`);
 
+  if (Number.isNaN(dateFirst) || Number.isNaN(dateSecond)) {
+    return "Incorrect month or day";
+  }
+
   return dateFirst.getTime() - dateSecond.getTime() > 0
     ? "second user is younger"
     : "first user is younger";
