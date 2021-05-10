@@ -13,7 +13,7 @@ function getDayByDate() {
   const dateObj = new Date(`${year}-${month}-${day}`);
 
   const daysName = [
-    "Восересенье",
+    "Воскресенье",
     "Понедельник",
     "Вторник",
     "Среда",
