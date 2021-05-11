@@ -5,7 +5,7 @@ function checkDate() {
 
 function checkEmail() {
   const string = prompt("input email");
-  return /^[\da-z.]+@[\da-z]+\.[a-z]+$/.test(string);
+  return /^[\dA-zА-я]+@[\dA-zА-я]+\.[A-zА-я]+$/.test(string);
 }
 
 export { checkDate, checkEmail };
