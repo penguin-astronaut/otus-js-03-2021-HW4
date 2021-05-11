@@ -33,32 +33,4 @@ function getCircleInfo(radius) {
   console.log(+circumference.toFixed(2), +area.toFixed(2));
 }
 
-function getQuadraticRoots(a, b, c) {
-  if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number") {
-    console.log("Incorrect side values");
-    return;
-  }
-
-  if (a === 0) {
-    console.log('"a" can\'t be 0');
-    return;
-  }
-
-  const d = b ** 2 - 4 * a * c;
-
-  if (d < 0) {
-    console.log("no roots of the equation");
-    return;
-  }
-  if (d === 0) {
-    console.log(-b / (2 * a));
-    return;
-  }
-
-  const x1 = (-b - Math.sqrt(d)) / (2 * a);
-  const x2 = (-b + Math.sqrt(d)) / (2 * a);
-
-  console.log(+x1.toFixed(2), +x2.toFixed(2));
-}
-
-export { checkRectangularTriangle, getQuadraticRoots, getCircleInfo };
+export { checkRectangularTriangle, getCircleInfo };
