@@ -22,13 +22,8 @@ function checkRectangularTriangle(sideOne, sideTwo, sideThree) {
 }
 
 function getCircleInfo(radius) {
-  if (typeof sideOne !== "number") {
+  if (typeof radius !== "number" || radius <= 0) {
     console.log("Incorrect radius value");
-    return;
-  }
-
-  if (radius <= 0) {
-    console.log("radius must be positive");
     return;
   }
 
