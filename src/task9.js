@@ -7,9 +7,14 @@ function checkRectangularTriangle(sideOne, sideTwo, sideThree) {
     return "Incorrect side values";
   }
 
+  if (sideOne <= 0 || sideTwo <= 0 || sideThree <= 0) {
+    return "side must be positive";
+  }
+
   if (sideOne > sideTwo && sideOne > sideThree) {
     return sideOne ** 2 === sideOne ** 2 + sideThree ** 2;
-  } if (sideTwo > sideOne && sideTwo > sideThree) {
+  }
+  if (sideTwo > sideOne && sideTwo > sideThree) {
     return sideTwo ** 2 === sideOne ** 2 + sideThree ** 2;
   }
 
@@ -42,7 +47,8 @@ function getQuadraticRoots(a, b, c) {
   if (d < 0) {
     console.log("no roots of the equation");
     return;
-  } if (d === 0) {
+  }
+  if (d === 0) {
     console.log(-b / (2 * a));
     return;
   }
