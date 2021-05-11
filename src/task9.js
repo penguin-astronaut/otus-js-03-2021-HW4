@@ -28,7 +28,7 @@ function getCircleInfo(radius) {
   const circumference = 2 * Math.PI * radius;
   const area = Math.PI * radius ** 2;
 
-  console.log(circumference, area);
+  console.log(circumference.toFixed(2), area.toFixed(2));
 }
 
 function getQuadraticRoots(a, b, c) {
