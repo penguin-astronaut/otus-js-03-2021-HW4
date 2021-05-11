@@ -54,11 +54,11 @@ function getQuadraticRoots(a, b, c) {
     console.log(-b / (2 * a));
     return;
   }
-  console.log(Math.sqrt(d).toFixed(2));
+
   const x1 = (-b - Math.sqrt(d)) / (2 * a);
   const x2 = (-b + Math.sqrt(d)) / (2 * a);
 
-  console.log(x1, x2);
+  console.log(+x1.toFixed(2), +x2.toFixed(2));
 }
 
 export { checkRectangularTriangle, getQuadraticRoots, getCircleInfo };
