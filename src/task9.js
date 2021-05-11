@@ -40,7 +40,7 @@ function getQuadraticRoots(a, b, c) {
   }
 
   if (a === 0) {
-    console.log('"a" can\'t be null');
+    console.log('"a" can\'t be 0');
     return;
   }
 
