@@ -45,11 +45,11 @@ describe("Average odd numbers", () => {
   });
 
   it("should be incorrect number", () => {
-    jest.spyOn(window, "prompt").mockReturnValue(-11);
+    jest.spyOn(window, "prompt").mockReturnValue("-11");
     average();
     expect(console.log).toHaveBeenCalledWith("Number must be positive");
 
-    jest.spyOn(window, "prompt").mockReturnValue(0);
+    jest.spyOn(window, "prompt").mockReturnValue("0");
     average();
     expect(console.log).toHaveBeenCalledWith("Number must be positive");
   });
