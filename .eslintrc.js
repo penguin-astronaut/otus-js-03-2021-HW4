@@ -9,6 +9,14 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "ignorePackages",
+      },
+    ],
+  },
   plugins: ["jest"],
 };
