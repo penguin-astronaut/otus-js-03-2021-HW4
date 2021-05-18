@@ -9,6 +9,10 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "import/prefer-default-export": "off",
+    "no-console": "off",
+    "no-alert": "off",
+  },
   plugins: ["jest"],
 };
