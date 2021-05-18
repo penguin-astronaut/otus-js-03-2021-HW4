@@ -17,6 +17,9 @@ module.exports = {
         js: "ignorePackages",
       },
     ],
+    "import/prefer-default-export": "off",
+    "no-console": "off",
+    "no-alert": "off",
   },
   plugins: ["jest"],
 };
