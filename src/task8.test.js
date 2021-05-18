@@ -34,17 +34,13 @@ describe("getDayByDate", () => {
 
 describe("minutsOfDay", () => {
   [
-    [1620432000000, 1620433200000, 20],
-    [1010448000000, 1010530740000, 1379],
-    [2620080000000, 2620119310000, 656],
+    [1620433200000, 260],
+    [1010530740000, 179],
+    [2620119310000, 895],
   ].forEach((item) => {
-    const [dateStart, dateNow, result] = item;
+    const [date, result] = item;
     it("check it", () => {
-      jest
-        .spyOn(Date.prototype, "getTime")
-        .mockImplementationOnce(() => dateStart);
-      jest.spyOn(Date, "now").mockImplementationOnce(() => dateNow);
-
+      jest.spyOn(Date, "now").mockImplementationOnce(() => date);
       expect(minutsOfDay()).toBe(result);
     });
   });

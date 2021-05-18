@@ -10,6 +10,13 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "ignorePackages",
+      },
+    ],
     "import/prefer-default-export": "off",
     "no-console": "off",
     "no-alert": "off",
